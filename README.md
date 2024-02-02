@@ -24,10 +24,10 @@ I'm a passionate developer, constantly exploring new technologies and working on
 
 ## 📚 Latest Blog Posts
 
-<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:START 
 - [Exploring the Future of Web Development](#)
 - [Understanding Docker: A Beginner's Guide](#)
-<!-- BLOG-POST-LIST:END -->
+ BLOG-POST-LIST:END -->
 
 ## 📫 Contact Me
 
