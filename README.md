@@ -27,9 +27,9 @@ A tech enthusiast and innovative developer, I'm on a mission to make a differenc
 
 ![Deepak's GitHub stats](https://github-readme-stats.vercel.app/api?username=deepzsenu&show_icons=true&theme=radical)
 
-### 📚 Coding Activity
+<!--### 📚 Coding Activity
 
-![Deepak's GitHub Activity Graph](https://activity-graph.herokuapp.com/graph?username=deepzsenu&theme=xcode)
+![Deepak's GitHub Activity Graph](https://activity-graph.herokuapp.com/graph?username=deepzsenu&theme=xcode) -->
 
 ### 📌 Pinned Repositories
 
