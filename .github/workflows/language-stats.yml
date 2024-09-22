@@ -24,8 +24,8 @@ jobs:
         run: |
           echo "## 📊 Language Statistics" >> README.md
           echo "${{ steps.lang-stats.outputs.report }}" >> README.md
-          git config --global user.email "youremail@example.com"
-          git config --global user.name "Deepak Saxena"
+          git config --global user.email "deepzsenu@gmail.com"
+          git config --global user.name "deepzsenu"
           git add README.md
           git commit -m "Update language stats"
           git push
