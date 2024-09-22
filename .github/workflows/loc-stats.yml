@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '0 0 * * 1'  # Runs every Monday
+    - cron: '0 0 * * *'  # Runs every Monday
 
 jobs:
   loc:
@@ -24,8 +24,8 @@ jobs:
         run: |
           loc=$(jq '.SUM.code' cloc-report.json)
           echo "Total lines of code in this repo: $loc" >> README.md
-          git config --global user.email "youremail@example.com"
-          git config --global user.name "Deepak Saxena"
+          git config --global user.email "deepzsenu@gmail.com"
+          git config --global user.name "deepzsenu"
           git add README.md
           git commit -m "Update lines of code"
           git push
