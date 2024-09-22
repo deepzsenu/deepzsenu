@@ -1,0 +1,34 @@
+name: Update Stats
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Update daily
+  push:
+    branches:
+      - main
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - name: Get Lines of Code and Commits
+        run: |
+          total_loc=$(git ls-files | xargs wc -l | grep total | awk '{print $1}')
+          total_commits=$(git rev-list --all --count)
+          echo "Total Lines of Code: $total_loc" >> stats.txt
+          echo "Total Commits: $total_commits" >> stats.txt
+
+      - name: Update README
+        run: |
+          loc=$(grep 'Total Lines of Code' stats.txt | awk '{print $5}')
+          commits=$(grep 'Total Commits' stats.txt | awk '{print $3}')
+          sed -i "s/<!--TOTAL_LINES_OF_CODE-->/Total Lines of Code: $loc/" README.md
+          sed -i "s/<!--TOTAL_COMMITS-->/Total Commits: $commits/" README.md
+          git config --local user.name "Deepak Saxena"
+          git config --local user.email "deepzsenu@gmail.com"
+          git add README.md
+          git commit -m "Update README with latest stats"
+          git push
