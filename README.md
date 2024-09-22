@@ -10,6 +10,8 @@ A tech enthusiast and innovative developer, I'm on a mission to make a differenc
 - 💬 **Let's talk:** From tech queries to collaboration, I'm all ears and ready to exchange ideas.
 - 📫 **Reach out to me at:** [deepzsenu@gmail.com](mailto:deepzsenu@gmail.com)
 
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=deepzsenu&label=Profile%20views&color=0e75b6&style=flat" alt="deepzsenu" /> </p>
+
 ## 💻 Technologies and Tools
 
 ![](https://img.shields.io/badge/Code-Python-blue)
@@ -35,7 +37,7 @@ A tech enthusiast and innovative developer, I'm on a mission to make a differenc
 
 ## 🌐 Top Languages
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=deepzsenu&layout=compact&hide=jupyter%20notebook&theme=radical)
+<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=deepzsenu&layout=compact&langs_count=6&size_weight=0.5&count_weight=1." alt="deepzsenu" /></p>
 
 
 ## 🔢 Stats Summary
