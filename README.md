@@ -27,27 +27,23 @@ A tech enthusiast and innovative developer, I'm on a mission to make a differenc
 
 ![Deepak's GitHub stats](https://github-readme-stats.vercel.app/api?username=deepzsenu&show_icons=true&theme=radical)
 
-<!--### 📚 Coding Activity
-
-![Deepak's GitHub Activity Graph](https://activity-graph.herokuapp.com/graph?username=deepzsenu&theme=xcode) -->
-
 ### 📌 Pinned Repositories
 
-<!-- Pinned Repositories:START 
-- [Your Repository Name](https://github.com/deepzsenu/your-repository-name)
-- [Another Repository](https://github.com/deepzsenu/another-repository)
- Pinned Repositories:END -->
+- [Portfolio-3D](https://github.com/deepzsenu/protfolio-3d)
+- [Personal Portfolio](https://github.com/deepzsenu/deepaksaxena.in)
 
-### 🌐 Top Languages
+## 🌐 Top Languages
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=deepzsenu&layout=compact&theme=radical)
 
-## 📘 Latest Blog Posts
+## 📊 Language Statistics
+<!-- Automatically updated by GitHub Actions -->
 
-<!-- BLOG-POST-LIST:START 
+## 📘 Latest Blog Posts
+<!-- BLOG-POST-LIST:START -->
 - [Exploring the Future of Web Development](#)
 - [Understanding Docker: A Beginner's Guide](#)
- BLOG-POST-LIST:END -->
+<!-- BLOG-POST-LIST:END -->
 
 ## 📞 Get In Touch
 
