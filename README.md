@@ -32,17 +32,19 @@ A tech enthusiast and innovative developer, I'm on a mission to make a differenc
 - [Portfolio-3D](https://github.com/deepzsenu/protfolio-3d)
 - [Personal Portfolio](https://github.com/deepzsenu/deepaksaxena.in)
 
+
 ## 🌐 Top Languages
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=deepzsenu&layout=compact&theme=radical)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=deepzsenu&layout=compact&hide=jupyter%20notebook&theme=radical)
 
-## 📊 Language Statistics
-<!-- Automatically updated by GitHub Actions -->
 
-## 📘 Latest Blog Posts
+## 🔢 Stats Summary
+- **Total Lines of Code:** <!--TOTAL_LINES_OF_CODE-->
+- **Total Commits:** <!--TOTAL_COMMITS-->
+
+
 <!-- BLOG-POST-LIST:START -->
-- [Exploring the Future of Web Development](#)
-- [Understanding Docker: A Beginner's Guide](#)
+
 <!-- BLOG-POST-LIST:END -->
 
 ## 📞 Get In Touch
