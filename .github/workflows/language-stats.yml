@@ -1,0 +1,31 @@
+name: Language Stats
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 0 * * 1'  # Weekly update
+
+jobs:
+  language-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Generate language stats
+        uses: matchai/repo-language-statistics-action@master
+        id: lang-stats
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update README with language stats
+        run: |
+          echo "## 📊 Language Statistics" >> README.md
+          echo "${{ steps.lang-stats.outputs.report }}" >> README.md
+          git config --global user.email "youremail@example.com"
+          git config --global user.name "Deepak Saxena"
+          git add README.md
+          git commit -m "Update language stats"
+          git push
