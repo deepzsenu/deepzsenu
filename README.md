@@ -39,10 +39,10 @@ A tech enthusiast and innovative developer, I'm on a mission to make a differenc
 
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=deepzsenu&layout=compact&langs_count=6&size_weight=0.5&count_weight=1." alt="deepzsenu" /></p>
 
-
+<!--
 ## 🔢 Stats Summary
-- **Total Lines of Code:** <!--TOTAL_LINES_OF_CODE-->
-- **Total Commits:** <!--TOTAL_COMMITS-->
+- **Total Lines of Code:** TOTAL_LINES_OF_CODE-->
+<!-- - **Total Commits:** TOTAL_COMMITS-->
 
 
 <!-- BLOG-POST-LIST:START -->
