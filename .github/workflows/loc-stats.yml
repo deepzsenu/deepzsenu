@@ -11,21 +11,31 @@ jobs:
   loc:
     runs-on: ubuntu-latest
     steps:
+      # Step 1: Checkout the repository
       - name: Checkout repository content
         uses: actions/checkout@v2
 
+      # Step 2: Install cloc (count lines of code)
       - name: Install cloc
         run: sudo apt-get install cloc
 
+      # Step 3: Count lines of code and save to a report file
       - name: Count lines of code
         run: cloc --json . > cloc-report.json
 
+      # Step 4: Update the README file with the total lines of code
       - name: Add to README
         run: |
           loc=$(jq '.SUM.code' cloc-report.json)
           echo "Total lines of code in this repo: $loc" >> README.md
-          git config --global user.email "deepzsenu@gmail.com"
-          git config --global user.name "deepzsenu"
+          
+      # Step 5: Commit and push the changes using GitHub Token for authentication
+      - name: Commit and Push changes
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "GitHub Actions Bot"
           git add README.md
           git commit -m "Update lines of code"
-          git push
+          git push https://x-access-token:$GH_TOKEN@github.com/deepzsenu/deepzsenu.git HEAD:master
