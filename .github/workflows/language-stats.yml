@@ -3,7 +3,7 @@ name: Language Stats
 on:
   push:
     branches:
-      - main
+      - master
   schedule:
     - cron: '0 0 * * *'  # Weekly update
 
@@ -18,7 +18,7 @@ jobs:
         uses: matchai/repo-language-statistics-action@master
         id: lang-stats
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Update README with language stats
         run: |
