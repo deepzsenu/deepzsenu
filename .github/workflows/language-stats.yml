@@ -1,11 +1,11 @@
-name: Language Stats
+name: Update Language Stats
 
 on:
   push:
     branches:
       - master
   schedule:
-    - cron: '0 0 * * *'  # Weekly update
+    - cron: '0 0 * * *'  # Runs weekly
 
 jobs:
   language-stats:
@@ -14,18 +14,23 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Generate language stats
-        uses: matchai/repo-language-statistics-action@master
-        id: lang-stats
-        with:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Get Language Statistics from GitHub API
+        run: |
+          curl -s https://api.github.com/repos/deepzsenu/deepzsenu/languages > languages.json
+          cat languages.json
 
-      - name: Update README with language stats
+      - name: Parse Language Statistics and Update README
         run: |
           echo "## 📊 Language Statistics" >> README.md
-          echo "${{ steps.lang-stats.outputs.report }}" >> README.md
-          git config --global user.email "deepzsenu@gmail.com"
-          git config --global user.name "deepzsenu"
+          languages=$(jq 'keys[] as $k | "\($k): \(.[$k])"' languages.json)
+          echo "$languages" >> README.md
+
+      - name: Commit and Push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN}}
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "GitHub Actions Bot"
           git add README.md
           git commit -m "Update language stats"
-          git push
+          git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/deepzsenu/deepzsenu.git HEAD:master
